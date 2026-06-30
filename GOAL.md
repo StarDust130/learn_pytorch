@@ -25,14 +25,14 @@ The most important topic.
 
 Learn
 
-Create tensor
-Shape
-dtype
-device
-GPU
-Basic math
-Indexing
-Reshape
+Create tensor ✅
+Shape ✅
+dtype ✅
+device ✅
+GPU ✅
+Basic math ✅
+Indexing ✅
+Reshape ✅
 
 Everything in PyTorch starts with tensors.
 
