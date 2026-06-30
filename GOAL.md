@@ -63,72 +63,72 @@ This is how every model is built.
 
 4️⃣ Layers ⭐⭐⭐⭐⭐
 
-Most used
+Most used✅
 
-Linear
-ReLU
-Dropout
-Embedding
-Conv2d (later)
+Linear✅
+ReLU✅
+Dropout✅
+Embedding✅
+Conv2d (later)✅
 
 5️⃣ Loss Functions ⭐⭐⭐⭐⭐
 
-How wrong is the model?
+How wrong is the model?✅
 
-Learn
+Learn✅
 
-CrossEntropyLoss
-MSELoss
-BCEWithLogitsLoss
+CrossEntropyLoss✅✅
+MSELoss✅
+BCEWithLogitsLoss✅
 
 6️⃣ Optimizer ⭐⭐⭐⭐⭐
 
-How the model improves.
+How the model improves.✅✅
 
-Mostly
+Mostly✅
 
-Adam
-AdamW
-SGD
+Adam✅
+AdamW✅✅
+SGD✅
 
 7️⃣ Training Loop ⭐⭐⭐⭐⭐
 
-The heart of PyTorch.
+The heart of PyTorch.✅✅
 
-Data
-
-↓
-
-Model
+Data✅
 
 ↓
 
-Prediction
+Model✅
 
 ↓
 
-Loss
+Prediction✅✅✅✅
 
 ↓
 
-Backward
+Loss✅✅✅
 
 ↓
 
-Optimizer Step
+Backward✅✅
 
 ↓
 
-Repeat
+Optimizer Step✅
+
+↓
+
+Repeat✅✅✅
 
 8️⃣ Dataset + DataLoader ⭐⭐⭐⭐☆
 
-Loading data correctly.
+Loading data correctly.✅✅
 
 9️⃣ Save & Load ⭐⭐⭐⭐☆
-torch.save()
+torch.save()✅
 
-torch.load()
+torch.load()✅
 
 🔟 GPU ⭐⭐⭐⭐⭐
 
