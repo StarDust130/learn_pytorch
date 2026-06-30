@@ -40,9 +40,9 @@ Everything in PyTorch starts with tensors.
 
 This is the magic.
 
-Learn
+Learn✅
 
-requires_grad
+requires_grad✅
 backward()
 Gradient
 
