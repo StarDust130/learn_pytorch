@@ -70,6 +70,7 @@ ReLU
 Dropout
 Embedding
 Conv2d (later)
+
 5️⃣ Loss Functions ⭐⭐⭐⭐⭐
 
 How wrong is the model?
@@ -79,6 +80,7 @@ Learn
 CrossEntropyLoss
 MSELoss
 BCEWithLogitsLoss
+
 6️⃣ Optimizer ⭐⭐⭐⭐⭐
 
 How the model improves.
@@ -88,6 +90,7 @@ Mostly
 Adam
 AdamW
 SGD
+
 7️⃣ Training Loop ⭐⭐⭐⭐⭐
 
 The heart of PyTorch.
