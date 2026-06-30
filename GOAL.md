@@ -117,6 +117,7 @@ Optimizer Step
 ↓
 
 Repeat
+
 8️⃣ Dataset + DataLoader ⭐⭐⭐⭐☆
 
 Loading data correctly.
@@ -125,6 +126,7 @@ Loading data correctly.
 torch.save()
 
 torch.load()
+
 🔟 GPU ⭐⭐⭐⭐⭐
 
 Move everything to CUDA.
