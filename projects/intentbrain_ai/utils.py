@@ -21,9 +21,11 @@ def tokenize(sentence):
 # -----------------------
 def build_vocab(training_data):
 
-    vocab = {}
+    vocab = {
+        "<UNK>": 0
+    }
 
-    index = 0
+    index = 1
 
     for sentence, intent in training_data:
 
@@ -51,7 +53,7 @@ def sentence_to_ids(sentence, vocab):
 
     for word in words:
 
-        ids.append(vocab[word])
+        ids.append(vocab.get(word, vocab["<UNK>"]))
 
     return torch.tensor(ids)
 
