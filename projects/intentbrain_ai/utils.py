@@ -1,24 +1,24 @@
+import string
 import torch
 
-# Tokenize a sentence into individual words 🗼
-import string
 
-# Tokenize a sentence into individual words 🗼
+# -----------------------
+# Tokenizer
+# -----------------------
 def tokenize(sentence):
 
-    sentence = sentence.lower() # Convert to lowercase
+    sentence = sentence.lower()
 
     sentence = sentence.translate(
-        str.maketrans("", "", string.punctuation) # Remove punctuation
+        str.maketrans("", "", string.punctuation)
     )
 
-    words = sentence.split() # Split the sentence into words
-
-    return words
+    return sentence.split()
 
 
-# Build a vocabulary from the training data 🏗️ 
-# eg:- {"hello": 0, "world": 1, "I": 2, "want": 3, "refund": 4}
+# -----------------------
+# Vocabulary
+# -----------------------
 def build_vocab(training_data):
 
     vocab = {}
@@ -40,7 +40,9 @@ def build_vocab(training_data):
     return vocab
 
 
-# Sentence to IDs 🆔
+# -----------------------
+# Sentence -> Tensor
+# -----------------------
 def sentence_to_ids(sentence, vocab):
 
     words = tokenize(sentence)
@@ -52,3 +54,16 @@ def sentence_to_ids(sentence, vocab):
         ids.append(vocab[word])
 
     return torch.tensor(ids)
+
+
+# -----------------------
+# Intent Labels
+# -----------------------
+label_map = {
+
+    "Track": 0,
+    "Refund": 1,
+    "Cancel": 2,
+    "Password": 3
+
+}
