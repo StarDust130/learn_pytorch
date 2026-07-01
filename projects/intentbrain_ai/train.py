@@ -12,17 +12,22 @@ intentbrain-ai/
 
 """
 
-from utils import tokenize
 from data import training_data
-from utils import build_vocab
+from utils import (
+    build_vocab,
+    sentence_to_ids,
+)
 
-# print(training_data)
 
-vocab = build_vocab(training_data)
-print(vocab)
+
+vocab = build_vocab(training_data ,)
+# print(vocab)
 
 sentence = "I Want Refund"
 
-tokens = tokenize(sentence)
+ids = sentence_to_ids(
+    sentence,
+    vocab
+)
 
-# print(tokens)
+print(ids)

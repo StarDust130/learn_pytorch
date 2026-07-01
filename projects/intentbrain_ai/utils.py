@@ -1,10 +1,18 @@
+import torch
+
+# Tokenize a sentence into individual words 🗼
+import string
 
 # Tokenize a sentence into individual words 🗼
 def tokenize(sentence):
 
-    sentence = sentence.lower() # convert to lowercase
+    sentence = sentence.lower() # Convert to lowercase
 
-    words = sentence.split() # split the sentence into words
+    sentence = sentence.translate(
+        str.maketrans("", "", string.punctuation) # Remove punctuation
+    )
+
+    words = sentence.split() # Split the sentence into words
 
     return words
 
@@ -30,3 +38,17 @@ def build_vocab(training_data):
                 index += 1
 
     return vocab
+
+
+# Sentence to IDs 🆔
+def sentence_to_ids(sentence, vocab):
+
+    words = tokenize(sentence)
+
+    ids = []
+
+    for word in words:
+
+        ids.append(vocab[word])
+
+    return torch.tensor(ids)
