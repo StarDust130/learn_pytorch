@@ -12,6 +12,7 @@ intentbrain-ai/
 
 """
 
+import time
 import torch
 import torch.nn as nn
 
@@ -60,46 +61,58 @@ optimizer = torch.optim.AdamW(
 # -----------------------
 # Training
 # -----------------------
-for epoch in range(500):
+
+best_loss = float("inf")
+start_time = time.time()
+
+for epoch in range(1000):
 
     total_loss = 0
 
     for sentence, label in training_data:
 
-        # Convert sentence -> tensor
         x = sentence_to_ids(sentence, vocab)
-
-        # Convert label -> tensor
         y = torch.tensor([label_map[label]])
 
-        # AI Guess
         prediction = model(x)
-
-        # CrossEntropy expects batch dimension
         prediction = prediction.unsqueeze(0)
 
-        # Teacher
         loss = loss_fn(prediction, y)
 
-        # Remove old gradients
         optimizer.zero_grad()
-
-        # Find mistakes
         loss.backward()
-
-        # Improve model
         optimizer.step()
 
         total_loss += loss.item()
 
-    if epoch % 50 == 0:
+    if total_loss < best_loss:
+        best_loss = total_loss
+        icon = "⭐"
+    else:
+        icon = " "
 
-        print(
-            f"Epoch {epoch} | Loss = {total_loss:.4f}"
-        )
+    if epoch % 100 == 0:
 
+        elapsed = time.time() - start_time
+        progress = (epoch + 1) / 10000
+
+        bar = "█" * int(progress * 30)
+        bar += "-" * (30 - len(bar))
+
+        print("\n" + "=" * 60)
+        print("🧠 IntentBrain AI Training")
+        print("=" * 60)
+
+        print(f"Epoch      : {epoch:,} / 10,00")
+        print(f"Progress   : [{bar}] {progress*100:.1f}%")
+        print(f"Loss       : {total_loss:.6f}")
+        print(f"Best Loss  : {best_loss:.6f} {icon}")
+        print(f"Runtime    : {elapsed:.1f}s")
+
+        print("=" * 60)
 
 print("\nTraining Finished ✅")
+torch.save(model.state_dict(), "model.pth")
 
 
 # -----------------------
