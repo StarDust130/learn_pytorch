@@ -96,3 +96,43 @@ for epoch in range(EPOCHS):
     )
 
 print("\nTraining Complete.")
+
+# =====================
+# Save Model
+torch.save(
+
+    model.state_dict(),
+
+    "memebrain.pth"
+
+)
+
+print("Model Saved.")
+
+# =====================
+# Evaluation
+# =====================
+
+correct = 0
+total = 0
+
+model.eval()
+
+with torch.no_grad():
+
+    for batch in loader:
+
+        input_ids = batch["input_ids"]
+        labels = batch["label"]
+
+        output = model(input_ids)
+
+        prediction = output.argmax(dim=1)
+
+        correct += (prediction == labels).sum().item()
+
+        total += labels.size(0)
+
+accuracy = correct / total * 100
+
+print(f"Accuracy = {accuracy:.2f}%")
