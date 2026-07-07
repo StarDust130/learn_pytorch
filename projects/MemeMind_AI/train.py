@@ -1,15 +1,29 @@
-from transformers import AutoTokenizer
+# from transformers import AutoTokenizer
 
-tokenizer = AutoTokenizer.from_pretrained(
-    "bert-base-uncased"
-)
+# tokenizer = AutoTokenizer.from_pretrained(
+#     "bert-base-uncased"
+# )
 
-text = "My code works first try! 😂"
+# text = "My code works first try! 😂"
 
-encoded = tokenizer(text)
+# encoded = tokenizer(text)
 
-print(tokenizer.tokenize(text))
+# # print(tokenizer.tokenize(text))
+
+# print()
+
+# # print(encoded["input_ids"])
+
+from dataset import MemeDataset
+
+dataset = MemeDataset()
+
+print(len(dataset))
 
 print()
 
-print(encoded["input_ids"])
+print(dataset[0])
+
+print()
+
+print(dataset[2])
