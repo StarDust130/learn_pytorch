@@ -5,7 +5,7 @@ Dataset's job is: Store -> Retrieve -> Preprocess -> Return
 '''
 
 from torch.utils.data import Dataset
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer # Create a tokenizer for BERT
 import torch
 
 from data import training_data
