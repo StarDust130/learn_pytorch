@@ -102,7 +102,7 @@ training_data = [
 ("my password manager forgot my password", "Funny"),
 ("that bug has been promoted to a feature", "Funny"),
 ("he invented extra work by accident", "Funny"),
-("my code is running entirely on luck", "Funny")
+("my code is running entirely on luck", "Funny"),
 
 
 ("I'm going to the grocery store later.", "Normal"),
@@ -205,7 +205,7 @@ training_data = [
 ("I'm organizing my workspace.", "Normal"),
 ("This software is easy to learn.", "Normal"),
 ("I need to back up my files.", "Normal"),
-("The code is much cleaner now.", "Normal")
+("The code is much cleaner now.", "Normal"),
 
     ("The sky is blue.", "Dead"),
     ("Water is a liquid.", "Dead"),
