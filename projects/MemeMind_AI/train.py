@@ -1,29 +1,16 @@
-# from transformers import AutoTokenizer
-
-# tokenizer = AutoTokenizer.from_pretrained(
-#     "bert-base-uncased"
-# )
-
-# text = "My code works first try! 😂"
-
-# encoded = tokenizer(text)
-
-# # print(tokenizer.tokenize(text))
-
-# print()
-
-# # print(encoded["input_ids"])
-
 from dataset import MemeDataset
+from torch.utils.data import DataLoader
 
 dataset = MemeDataset()
 
-print(len(dataset))
+loader = DataLoader(
+    dataset,
+    batch_size=2,
+    shuffle=True
+)
 
-print()
+for batch in loader:
 
-print(dataset[0])
+    print(batch)
 
-print()
-
-print(dataset[2])
+    break
