@@ -1,6 +1,15 @@
-from data import training_data
+from transformers import AutoTokenizer
 
-print(training_data)
+tokenizer = AutoTokenizer.from_pretrained(
+    "bert-base-uncased"
+)
+
+text = "My code works first try! 😂"
+
+encoded = tokenizer(text)
+
+print(tokenizer.tokenize(text))
+
 print()
 
-print("Total Examples:", len(training_data))
+print(encoded["input_ids"])
