@@ -13,12 +13,11 @@ model = MemeBrain()
 model.load_state_dict(
 
     torch.load("memebrain.pth")
-
 )
 
 model.eval()
 
-text = "Fuck you this is bad"
+text = "I am cool boy"
 
 encoding = tokenizer(
 
