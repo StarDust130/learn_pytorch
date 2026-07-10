@@ -1,10 +1,11 @@
 import torch
 import torch.nn as nn
 
-class PostionalEncoding(nn.Module):
+
+class PositionalEmbedding(nn.Module):
     #  model supports sentences up to 128 tokens
 
-    def __int__(self, max_length=128, embedding_dim=64):
+    def __init__(self, max_length=128, embedding_dim=64):
         super().__init__()
       
     # Position -> Embedding 🤯
