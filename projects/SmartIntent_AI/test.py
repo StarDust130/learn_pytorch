@@ -1,3 +1,17 @@
+"""
+➡️ Total = 9 Intent Categories 
+👋 Greeting 
+🍕 Food 
+✈️ Travel 
+💸 Refund 
+🎵 Music 
+⏰ Alarm 
+🧮 Calculator 
+☀️ Weather 
+📰 News
+
+"""
+
 import torch
 
 from model import PositionalEmbedding
