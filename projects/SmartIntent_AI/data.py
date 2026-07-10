@@ -109,6 +109,9 @@ training_data = [
     ("Repeat this song", "Music"),
     ("Play my favorite song", "Music"),
     ("Start the music", "Music"),
+    ("Bollywood music", "Music"),
+    ("Bollywood song", "Music"),
+    ("Song", "Music"),
 
     # ⏰ Alarm
     ("Set an alarm", "Alarm"),
