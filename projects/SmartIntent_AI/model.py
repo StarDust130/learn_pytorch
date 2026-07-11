@@ -34,6 +34,8 @@ class PositionalEmbedding(nn.Module):
         # ➕ Add position to words
         return x + position_vectors
 
+# ==================================================================
+# ==================================================================
 # ❌❌❌WE are not using it❌❌❌, we use MultiHeadAttention
 # ✍️ Built from scratch
 # 🚀 Better: nn.MultiheadAttention
@@ -82,8 +84,11 @@ class SelfAttention(nn.Module):
 
         return output
 
+# ==================================================================
+# ==================================================================
 # ✅ Production version 🏆🏆( This use in production)
 # 🚀 PyTorch built-in
+# Multi-Head Attention is made of multiple Self-Attentions.
 class MultiHeadAttention(nn.Module):
 
     def __init__(
@@ -111,7 +116,9 @@ class MultiHeadAttention(nn.Module):
         )
 
         return output
- 
+
+# ==================================================================
+# ==================================================================
 # ✍️ Built from scratch
 class FeedForward(nn.Module):
 
@@ -143,6 +150,9 @@ class FeedForward(nn.Module):
 
         return self.network(x)
 
+
+# ==================================================================
+# ==================================================================
 # ✍️ Built from scratch
 # 🚀 Better: nn.TransformerEncoderLayer
 class TransformerBlock(nn.Module):
@@ -191,8 +201,8 @@ class TransformerBlock(nn.Module):
 
         return x
 
-
-
+# ==================================================================
+# ==================================================================
 # ✍️ Built from scratch
 # 🚀 Better: BERT, RoBERTa, DistilBERT
 # OG MODEL 🤭
@@ -250,7 +260,8 @@ class SmartIntentAI(nn.Module):
 
         return output
 
-
+# ==================================================================
+# ==================================================================
 """
 😊 Easy Flow
 
