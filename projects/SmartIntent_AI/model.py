@@ -7,7 +7,7 @@ import torch.nn as nn
 class PositionalEmbedding(nn.Module):
     # 📍 Adds word position
 
-    def __init__(self, max_length=128, embedding_dim=64):
+    def __init__(self, max_length=128, embedding_dim=128):
         super().__init__()
 
         # 📦 Store position vectors
@@ -41,7 +41,7 @@ class PositionalEmbedding(nn.Module):
 # 🚀 Better: nn.MultiheadAttention
 class SelfAttention(nn.Module):
 
-    def __init__(self, embedding_dim=64):
+    def __init__(self, embedding_dim=128):
 
         super().__init__()
 
@@ -93,7 +93,7 @@ class MultiHeadAttention(nn.Module):
 
     def __init__(
         self,
-        embedding_dim=64,
+        embedding_dim=128,
         num_heads=4
     ):
 
@@ -122,7 +122,7 @@ class MultiHeadAttention(nn.Module):
 # ✍️ Built from scratch
 class FeedForward(nn.Module):
 
-    def __init__(self, embedding_dim=64):
+    def __init__(self, embedding_dim=128):
 
         super().__init__()
 
@@ -157,7 +157,7 @@ class FeedForward(nn.Module):
 # 🚀 Better: nn.TransformerEncoderLayer
 class TransformerBlock(nn.Module):
 
-    def __init__(self, embedding_dim=64):
+    def __init__(self, embedding_dim=128):
 
         super().__init__()
 
@@ -211,7 +211,7 @@ class SmartIntentAI(nn.Module):
     def __init__(
         self,
         vocab_size=30522,
-        embedding_dim=64,
+        embedding_dim=128,
         max_length=128,
         num_classes=9
     ):
