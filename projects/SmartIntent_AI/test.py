@@ -12,14 +12,28 @@
 
 """
 
+# import torch
+
+# from model import PositionalEmbedding
+
+# layer = PositionalEmbedding()
+
+# x = torch.randn(2, 10, 64)
+
+# output = layer(x)
+
+# print(output.shape)
+
 import torch
 
-from model import PositionalEmbedding
+from model import SelfAttention
 
-layer = PositionalEmbedding()
+layer = SelfAttention()
 
 x = torch.randn(2, 10, 64)
 
-output = layer(x)
+Q, K, V = layer(x)
 
-print(output.shape)
+print(Q.shape)
+print(K.shape)
+print(V.shape)
