@@ -25,3 +25,33 @@ class PositionalEmbedding(nn.Module):
         return x + position_vectors
 
 
+class SelfAttention(nn.Module):
+
+    def __init__(self, embedding_dim=64):
+
+        super().__init__()
+
+        self.query = nn.Linear(
+            embedding_dim,
+            embedding_dim
+        )
+
+        self.key = nn.Linear(
+            embedding_dim,
+            embedding_dim
+        )
+
+        self.value = nn.Linear(
+            embedding_dim,
+            embedding_dim
+        )
+
+    def forward(self, x):
+
+        Q = self.query(x)
+
+        K = self.key(x)
+
+        V = self.value(x)
+
+        return Q, K, V
