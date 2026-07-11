@@ -2,7 +2,8 @@ import math
 import torch
 import torch.nn as nn
 
-
+# ✍️ Built from scratch
+# ✅ Ready option: nn.Embedding
 class PositionalEmbedding(nn.Module):
     # 📍 Adds word position
 
@@ -33,7 +34,9 @@ class PositionalEmbedding(nn.Module):
         # ➕ Add position to words
         return x + position_vectors
 
-
+# ❌❌❌WE are not using it❌❌❌, we use MultiHeadAttention
+# ✍️ Built from scratch
+# 🚀 Better: nn.MultiheadAttention
 class SelfAttention(nn.Module):
 
     def __init__(self, embedding_dim=64):
@@ -79,7 +82,8 @@ class SelfAttention(nn.Module):
 
         return output
 
-
+# ✅ Production version 🏆🏆( This use in production)
+# 🚀 PyTorch built-in
 class MultiHeadAttention(nn.Module):
 
     def __init__(
@@ -107,8 +111,8 @@ class MultiHeadAttention(nn.Module):
         )
 
         return output
-
-
+ 
+# ✍️ Built from scratch
 class FeedForward(nn.Module):
 
     def __init__(self, embedding_dim=64):
@@ -139,7 +143,8 @@ class FeedForward(nn.Module):
 
         return self.network(x)
 
-
+# ✍️ Built from scratch
+# 🚀 Better: nn.TransformerEncoderLayer
 class TransformerBlock(nn.Module):
 
     def __init__(self, embedding_dim=64):
@@ -186,6 +191,10 @@ class TransformerBlock(nn.Module):
 
         return x
 
+
+
+# ✍️ Built from scratch
+# 🚀 Better: BERT, RoBERTa, DistilBERT
 # OG MODEL 🤭
 class SmartIntentAI(nn.Module):
 
