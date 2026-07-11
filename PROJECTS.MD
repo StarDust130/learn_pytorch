@@ -1,33 +1,40 @@
 # Grammarly AI -> see words correct grammar, spelling, and style mistakes in your writing. It also provides suggestions for improving clarity, conciseness, and tone.
 
 
-Our Roadmap
-
-That's why our roadmap is:
-
-Project 1
+🟢 Project 1
 SmartIntent AI
-(Train from scratch)
+(Encoder)
         ✅
 
 ↓
 
-Project 2
-TinyGPT
-(Build decoder)
+🟢 Project 2
+TinyChatGPT
+(Decoder)
 
 ↓
 
-Project 3
+🟢 Project 3
 TinyBERT
-(Build BERT)
+(BERT from scratch)
+
+========================
+NOW YOU UNDERSTAND
+HOW LLMs WORK
+========================
 
 ↓
 
-Project 4
-Fine-tune REAL BERT ⭐
+🔵 Project 4
+Fine-tune Real BERT
 
 ↓
 
-Project 5
-Fine-tune REAL Llama/GPT
+🔵 Project 5
+Fine-tune Real Llama/Qwen
+
+↓
+
+🟣 Project 6
+Production AI Agent
+(RAG + Memory + Tools + MCP)
