@@ -1,3 +1,4 @@
+import math
 import torch
 import torch.nn as nn
 
@@ -31,27 +32,32 @@ class SelfAttention(nn.Module):
 
         super().__init__()
 
-        self.query = nn.Linear(
-            embedding_dim,
-            embedding_dim
-        )
-
-        self.key = nn.Linear(
-            embedding_dim,
-            embedding_dim
-        )
-
-        self.value = nn.Linear(
-            embedding_dim,
-            embedding_dim
-        )
+        self.query = nn.Linear(embedding_dim, embedding_dim)
+        self.key = nn.Linear(embedding_dim, embedding_dim)
+        self.value = nn.Linear(embedding_dim, embedding_dim)
 
     def forward(self, x):
 
         Q = self.query(x)
-
         K = self.key(x)
-
         V = self.value(x)
 
-        return Q, K, V
+        scores = torch.matmul(
+            Q,
+            K.transpose(-2, -1)
+        )
+
+        # ⭐ Scaled Dot Product Attention
+        scores = scores / math.sqrt(Q.size(-1))
+
+        attention = torch.softmax(
+            scores,
+            dim=-1
+        )
+
+        output = torch.matmul(
+            attention,
+            V
+        )
+
+        return output
