@@ -1,0 +1,132 @@
+I like pizza.
+I like burger.
+I like pasta.
+I like rice.
+I like noodles.
+
+You like pizza.
+You like burger.
+You like rice.
+You like salad.
+You like soup.
+
+He likes pizza.
+He likes pasta.
+He likes rice.
+
+She likes burger.
+She likes salad.
+She likes noodles.
+
+We like pizza.
+We like pasta.
+They like rice.
+They like soup.
+
+I eat pizza.
+I eat rice.
+I eat salad.
+
+You eat burger.
+You eat pasta.
+You eat noodles.
+
+He eats soup.
+He eats rice.
+
+She eats pizza.
+She eats salad.
+
+We eat fruit.
+They eat bread.
+
+Pizza is tasty.
+Burger is tasty.
+Pasta is tasty.
+Rice is healthy.
+Salad is fresh.
+Soup is hot.
+Bread is soft.
+Fruit is sweet.
+
+Pizza is hot.
+Soup is hot.
+Tea is hot.
+
+Ice cream is cold.
+Juice is cold.
+Water is cold.
+
+Apple is red.
+Banana is yellow.
+Orange is orange.
+Grapes are purple.
+
+Cheese is soft.
+Bread is fresh.
+Butter is smooth.
+
+Milk is white.
+Coffee is black.
+Tea is brown.
+
+I drink water.
+I drink milk.
+I drink juice.
+
+You drink tea.
+You drink coffee.
+
+He drinks milk.
+She drinks juice.
+
+We drink water.
+They drink tea.
+
+Pizza has cheese.
+Burger has cheese.
+Salad has vegetables.
+Soup has water.
+Sandwich has bread.
+
+Apple is a fruit.
+Banana is a fruit.
+Orange is a fruit.
+
+Carrot is a vegetable.
+Potato is a vegetable.
+Tomato is a vegetable.
+
+Bread comes from wheat.
+Cheese comes from milk.
+Butter comes from milk.
+
+I cook pasta.
+You cook rice.
+He cooks soup.
+She cooks noodles.
+
+Pizza smells good.
+Bread smells good.
+Soup smells good.
+
+Cake is sweet.
+Candy is sweet.
+Lemon is sour.
+
+Salt is salty.
+Sugar is sweet.
+
+Breakfast is early.
+Lunch is noon.
+Dinner is late.
+
+I want pizza.
+You want pasta.
+He wants rice.
+She wants salad.
+
+I love pizza.
+You love burgers.
+We love food.
+They love dessert.
