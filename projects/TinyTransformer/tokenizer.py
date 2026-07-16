@@ -3,7 +3,7 @@ class CharacterTokenizer:
 
     def __init__(self, text):
 
-        # Find every unique character
+        # Find every unique character and sort them.
         chars = sorted(set(text))
 
         # Character → Number
