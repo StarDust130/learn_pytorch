@@ -41,3 +41,22 @@
 ⬜ Step 19 Scale to Thousands of Users
 
 ⬜ Step 20 Final Production AI System 🎉
+
+---
+
+🛠 Tech Stack
+
+We'll use tools that are common in production AI services:
+
+🐍 Python
+⚡ FastAPI
+🤖 OpenAI / Anthropic SDK / Groq (free 😭)
+🧠 LangGraph
+🔌 MCP
+📚 Vector Database (starting simple, then production options)
+🗄 PostgreSQL
+🚀 Docker
+☁️ Deployment
+📊 Logging & Monitoring
+
+We'll also discuss where companies choose alternatives and why.
